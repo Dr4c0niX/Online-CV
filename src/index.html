@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-[url('./assets/bg.png')] bg-cover bg-center bg-fixed min-h-screen">
+    <!-- Barre dumenu haut -->
+    <header class="fixed top-0 left-0 right-0 z-50 h-[3vh] bg-black/30 flex items-center justify-between px-4 text-white text-sm font-medium">
+        <div class="flex items-center space-x-4 cursor-pointer">
+            <i class="fa-brands fa-apple text-lg"></i>
+            <div class="hidden lg:flex items-center space-x-6 py-1">
+                <p>Finder</p>
+                <p>Fichier</p>
+                <p>Édition</p>
+                <p>Présentation</p>
+                <p>Aller</p>
+                <p>Fenêtre</p>
+                <p>Aide</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4 py-1 ">
+            <div class="hidden md:flex items-center space-x-4 cursor-pointer">
+                <i class="fa-solid fa-battery-full"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-list"></i>
+            </div>
+            <p class="mr-2 select-none">Vendredi 26 Septembre 14:02</p>
+        </div>
+    </header>
+    <!-- Conteneur princpal (fenêtre vscode) -->
+    <main class="flex justify-center p-4 pt-[calc(3vh+1rem)]">
+        <div class="h-[93vh] w-full md:max-w-[80%] rounded-lg overflow-hidden">
+            <!-- Barre haute -->
+            <div class="h-8 bg-zinc-900 border-b border-neutral-700 flex items-center justify-between px-3">
+                <div class="flex space-x-2">
+                    <div class="w-3 h-3 bg-red-500 hover:bg-red-700 rounded-full cursor-pointer"></div>
+                    <div class="w-3 h-3 bg-yellow-500 hover:bg-yellow-700 rounded-full cursor-pointer"></div>
+                    <div class="w-3 h-3 bg-green-500 hover:bg-green-700 rounded-full cursor-pointer"></div>
+                </div>
+                <div class="text-white text-xs font-medium">cv.py</div>
+                <div class="w-12"></div>
+            </div>
+            <div class="flex h-[calc(100%-2rem)]">
+                <!-- Sidebar -->
+                <div class="w-8 bg-zinc-900 border-r border-neutral-700 flex flex-col items-center pt-2 space-y-5">
+                    <div class="border-l-2 border-blue-500 w-full flex justify-center">
+                        <i class="fa-solid fa-file text-gray-300 hover:text-white text-md cursor-pointer"></i>
+                    </div>
+                    <i class="fa-solid fa-search text-gray-400 hover:text-white text-md cursor-pointer"></i>
+                    <i class="fa-solid fa-code-branch text-gray-400 hover:text-white text-md cursor-pointer"></i>
+                    <i class="fa-solid fa-cube text-gray-400 hover:text-white text-md cursor-pointer"></i>
+                </div>
+                <!-- Barre intermédiaire -->
+                <div class="hidden md:block w-40 bg-zinc-900 text-white text-xs font-medium">
+                    <div class="flex items-center justify-between h-8 px-2 border-b border-neutral-700 text-gray-300">
+                        <span>EXPLORATEUR</span>
+                        <i class="fa-solid fa-ellipsis py-1 hover:bg-neutral-700 text-sm cursor-pointer rounded"></i>
+                    </div>
+                    <div class="p-2">
+                        <div class="flex items-center space-x-1 mb-1">
+                            <i class="fa-solid fa-chevron-down text-gray-300 text-xs cursor-pointer"></i>
+                            <span class="text-gray-300">MON-CV</span>
+                        </div>
+                        <div class="flex items-center space-x-2 p-1 bg-blue-500/30 border border-blue-500 cursor-pointer">
+                            <img src="./assets/pylogo.png" alt="python logo" class="w-3 h-3">
+                            <span>cv.py</span>
+                        </div>
+                    </div>
+                </div>         
+                <!-- Troisième barre-->
+                <div class="flex-1 bg-zinc-800 md:border-l border-neutral-700">
+                    <!-- Onglet -->
+                    <div class="h-8 flex bg-zinc-900 border-b border-neutral-700">
+                        <div class="flex items-center h-full px-3 bg-zinc-800 border-r border-neutral-700 cursor-pointer">
+                            <img src="./assets/pylogo.png" alt="python logo" class="w-4 h-4">
+                            <span class="text-white text-xs ml-2 font-medium">cv.py</span>
+                            <i class="fa-solid fa-times py-1 text-gray-400 text-xs ml-2 hover:bg-neutral-700 cursor-pointer rounded"></i>
+                        </div>
+                    </div>
+                    <!-- Contenu -->
+                    <div class="flex flex-col h-full p-2 pb-12 text-sm font-mono overflow-y-auto">
+                        <div class="flex mx-2 space-x-4">
+                            <div class="text-gray-500 select-none">1</div>
+                            <div><span class="text-blue-400">Mon_profil </span><span class="text-white">= </span><span class="text-yellow-400">{</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-4">
+                            <div class="text-gray-500 select-none">2</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-[#ce9178]">"Nom"</span><span class="text-white">: </span><span class="text-[#ce9178]">"Drain"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-4">
+                            <div class="text-gray-500 select-none">3</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-[#ce9178]">"Prénom"</span><span class="text-white">: </span><span class="text-[#ce9178]">"Alexandre"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-4">
+                            <div class="text-gray-500 select-none">4</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-[#ce9178]">"Âge"</span><span class="text-white">: </span><span class="text-emerald-200">20</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-4">
+                            <div class="text-gray-500 select-none">5</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-[#ce9178]">"Statut"</span><span class="text-white">: </span><span class="text-[#ce9178]">"Étudiant en Pré-Msc à Epitech, à la recherche d'une alternance pour Janvier 2026"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-4">
+                            <div class="text-gray-500 select-none">6</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-[#ce9178]">"Langues"</span><span class="text-white">: </span><span class="text-[#ce9178]">"Français, Anglais, Japonais"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-4">
+                            <div class="text-gray-500 select-none">7</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-[#ce9178]">"Localisation"</span><span class="text-white">: </span><span class="text-[#ce9178]">"Boulogne-Billancourt"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-4">
+                            <div class="text-gray-500 select-none">8</div>
+                            <div><span class="text-yellow-400">}</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-4">
+                            <div class="text-gray-500 select-none">9</div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">10</div>
+                            <div><span class="text-blue-400">Compétences </span><span class="text-white">= </span><span class="text-yellow-400">{</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">11</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Programmation"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">12</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Python"</span><span class="text-white">, </span><span class="text-[#ce9178]">"C"</span><span class="text-white">, </span><span class="text-[#ce9178]">"C++"</span><span class="text-white">, </span><span class="text-[#ce9178]">"SQL"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">13</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"HTML/CSS"</span><span class="text-white">, </span><span class="text-[#ce9178]">"JS"</span><span class="text-white">, </span><span class="text-[#ce9178]">"PHP"</span><span class="text-white">, </span><span class="text-[#ce9178]">"Symfony"</span><span class="text-white">, </span><span class="text-[#ce9178]">"React(Vite)"</span><span class="text-white">, </span><span class="text-[#ce9178]">"NextJS"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">14</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">15</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Réseaux"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">16</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Création et amintenance de réseaux"</span><span class="text-white">, </span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">17</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Wireshark"</span><span class="text-white">, </span><span class="text-[#ce9178]">"Cisco Packet Tracer"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">18</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">19</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Maintenance informatique"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">20</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Montage/démontage et réparation d'appareils électroniques"</span><span class="text-white">, </span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">21</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Connaissance des composants (hardware)"</span><span class="text-white">, </span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">22</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Maintenance software"</span><span class="text-white">, </span><span class="text-[#ce9178]">"Arduino"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">23</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">24</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Système d'exploitation/Outils"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">25</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Windows, Linux, MacOS"</span><span class="text-white">, </span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">26</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"VirtualBox"</span><span class="text-white">, </span><span class="text-[#ce9178]">"Docker"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">27</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">28</div>
+                            <div><span class="text-yellow-400">}</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">29</div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">30</div>
+                            <div><span class="text-blue-400">Projets </span><span class="text-white">= </span><span class="text-yellow-400">{</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">31</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Tamagotchi"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">32</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Réalisation d'un tamagotchi complet : code, modélisation 3D, soudure et assemblage"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">33</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Projet de 1ère année de Bachelor"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">34</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">35</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Twitter-like complet"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">36</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Développement complet d'une application web dans le style de Twitter"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">37</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Conception de la base de données</span><span class="text-white">, </span><span class="text-[#ce9178]">"Développement frontend/backend"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">38</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Déploiement sur un serveur en ligne"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">39</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">40</div>
+                            <div><span class="text-yellow-400">}</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">41</div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">42</div>
+                            <div><span class="text-blue-400">Experiences professionnelles </span><span class="text-white">= </span><span class="text-yellow-400">{</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">43</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Technicien poste de travail (Stage)"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">44</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"07/2024 et 09/2024 - Groupe Pasteur Mutualité"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">45</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Exploration des différents services de la DSI de cette entreprise de plus de 500 employés"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">46</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Support poste de travail (assistance logicielle & matérielle)"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">47</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Développement (TALEND - découverte)"</span><span class="text-white">, </span><span class="text-[#ce9178]">"RSSI (découverte du métier)"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">48</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">49</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Archiviste"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">50</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"06/2023 - 09/2023 - Paris - Clinique Jouvenet"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">51</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Rangement, tri et enregistrement numérique de dossiers patients"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">52</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">53</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Baby-sitter"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">54</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"09/2023 - 07/2025"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">55</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Garde de deux enfants, aide aux devoirs, jeux"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">56</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">57</div>
+                            <div><span class="text-yellow-400">}</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">58</div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">59</div>
+                            <div><span class="text-blue-400">Formations </span><span class="text-white">= </span><span class="text-yellow-400">{</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">60</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Pré MSc et MSc (3/4/5ème année)"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">61</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"2025-2028"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">62</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Epitech - Paris"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">63</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">64</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Bachelor informatique (1/2ème année)"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">65</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"2023-2025"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">66</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Ecole Hexagone - Versailles"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">67</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">68</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-blue-300">"Baccalauréat général"</span><span class="text-white">: </span><span class="text-pink-400">[</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">69</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"2023"</span><span class="text-white">,</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">70</div>
+                            <div class="border-l border-gray-600 pl-18"><span class="text-[#ce9178]">"Spécialités Mathématiques/SES - Cité scolaire Jean De La Fontaine"</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">71</div>
+                            <div class="border-l border-gray-600 pl-8"><span class="text-pink-400">]</span></div>
+                        </div>
+                        <div class="flex mx-2 space-x-2">
+                            <div class="text-gray-500 select-none">72</div>
+                            <div><span class="text-yellow-400">}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Container parent formulaire contact et infos contact -->
+    <section class="flex justify-center p-4">
+        <div class="w-full md:max-w-[90%] h-full flex flex-col md:flex-row gap-4">
+            <!-- Formulaire de contact -->
+            <div class="flex-1 rounded-lg overflow-hidden">
+                <!-- Barre haute -->
+                <div class="h-8 bg-zinc-900 border-b border-neutral-700 flex items-center justify-between px-3">
+                    <div class="flex space-x-2">
+                        <div class="w-3 h-3 bg-red-500 hover:bg-red-700 rounded-full cursor-pointer"></div>
+                        <div class="w-3 h-3 bg-yellow-500 hover:bg-yellow-700 rounded-full cursor-pointer"></div>
+                        <div class="w-3 h-3 bg-green-500 hover:bg-green-700 rounded-full cursor-pointer"></div>
+                    </div>
+                    <div class="text-white text-xs font-medium">Contact</div>
+                    <div class="w-12"></div>
+                </div>
+                <!-- Formulaire -->
+                <div class="bg-zinc-800 pt-4 p-6">
+                    <h2 class="text-2xl font-bold text-white mb-4">Formulaire de contact</h2>
+                    <form class="space-y-4">
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <div class="flex-1">
+                                <label for="nom" class="block text-sm font-medium text-gray-300 mb-1">Nom</label>
+                                <input type="text" id="nom" name="nom" class="w-full px-3 py-2 border border-neutral-600 rounded-md bg-zinc-700 text-white focus:outline-none" required>
+                            </div>
+                            <div class="flex-1">
+                                <label for="prenom" class="block text-sm font-medium text-gray-300 mb-1">Prénom</label>
+                                <input type="text" id="prenom" name="prenom" class="w-full px-3 py-2 border border-neutral-600 rounded-md bg-zinc-700 text-white focus:outline-none" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-neutral-600 rounded-md bg-zinc-700 text-white focus:outline-none" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="6" class="w-full px-3 py-2 border border-neutral-600 rounded-md bg-zinc-700 text-white focus:outline-none resize-none" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-green-800/70 hover:bg-green-500/80 text-white font-medium py-2 px-4 rounded-md">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- Infos contact -->
+            <div class="flex-1 h-[50vh] rounded-lg overflow-hidden">
+                <!-- Barre haute -->
+                <div class="h-8 bg-zinc-900 border-b border-neutral-700 flex items-center justify-between px-3">
+                    <div class="flex space-x-2">
+                        <div class="w-3 h-3 bg-red-500 hover:bg-red-700 rounded-full cursor-pointer"></div>
+                        <div class="w-3 h-3 bg-yellow-500 hover:bg-yellow-700 rounded-full cursor-pointer"></div>
+                        <div class="w-3 h-3 bg-green-500 hover:bg-green-700 rounded-full cursor-pointer"></div>
+                    </div>
+                    <div class="text-white text-xs font-medium">Mes infos de contact</div>
+                    <div class="w-12"></div>
+                </div>
+                <!-- Infos contact -->
+                <div class="h-[calc(100%-2rem)] bg-zinc-800 pt-4 p-6">
+                    <h2 class="text-2xl font-bold text-white mb-6">Me contacter autrement</h2>
+                    <div class="space-y-6 text-gray-300">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-white w-5"></i>
+                            <a href="mailto:alex.drain0908@gmail.com" class="hover:text-zinc-700">alex.drain0908@gmail.com</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-white w-5"></i>
+                            <a href="tel:+33603334144" class="hover:text-zinc-700">06 03 33 41 44</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-linkedin text-blue-500 w-5"></i>
+                            <a href="https://www.linkedin.com/in/alexandre-drain" target="_blank" class="hover:text-blue-500">www.linkedin.com/in/alexandre-drain</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-brands fa-github text-white w-5"></i>
+                            <a href="https://github.com/Dr4c0niX" target="_blank" class="hover:text-zinc-700">https://github.com/Dr4c0niX</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-globe text-white w-5"></i>
+                            <a href="https://alexandredrain.com" target="_blank" class="hover:text-zinc-700">alexandredrain.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/f01d0aef56.js"></script>
+</body>
+</html>
